@@ -1,12 +1,10 @@
-# cat-vs-dog-classifier
-Cat vs Dog image classifier using CNN and transfer learning (TensorFlow/Keras)
 # 🐱🐶 Cat vs Dog Image Classifier
 
 A deep learning project that tells cats from dogs in photos.
 I improved the model step by step: first a CNN built from scratch,
 then fixing overfitting, then transfer learning with MobileNetV2.
 
-![Demo](images/demo_screenshot.png)
+![Demo](demo_screenshot.png)
 
 ## Results
 
@@ -16,11 +14,17 @@ then fixing overfitting, then transfer learning with MobileNetV2.
 | 2 | + Data augmentation + Dropout | ~74% |
 | 3 | Transfer learning (MobileNetV2) | ~97% |
 
-### Learning curves (transfer learning)
-![Curves](images/stage4_curves.png)
+### Step 1: CNN from scratch (overfitting)
+![Stage 2](stage2_curves.png)
+
+### Step 2: With data augmentation and dropout
+![Stage 3](stage3_curves.png)
+
+### Step 3: Transfer learning (best result)
+![Stage 4](stage4_curve.png)
 
 ### Confusion matrix
-![Confusion matrix](images/confusion_matrix.png)
+![Confusion matrix](confusion_matrix.png)
 
 ## What I did, step by step
 1. **Loaded the data**: 2,000 training and 1,000 validation photos
@@ -51,7 +55,7 @@ then fixing overfitting, then transfer learning with MobileNetV2.
 
 ## Run it yourself
 ```bash
-git clone https://github.com/YOUR-USERNAME/cat-vs-dog-classifier.git
+git clone https://github.com/SanikaDighe011/cat-vs-dog-classifier.git
 cd cat-vs-dog-classifier
 pip install -r requirements.txt
 python app.py
